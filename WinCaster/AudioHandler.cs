@@ -95,9 +95,9 @@ namespace WinCaster
         }
         public void StartRecording(string thePath)
         {
-
-            string voiceOutput = Path.Combine(thePath, "voice.wav");
-            string guestOutput = Path.Combine(thePath, "guest.wav");
+            string dateString = DateTime.Now.ToString("yyyyMMddHmmss");
+            string voiceOutput = Path.Combine(thePath, dateString + "-voice.wav");
+            string guestOutput = Path.Combine(thePath, dateString + "-guest.wav");
 
             inputWave = new WaveWriter(voiceOutput, inputCapture.WaveFormat);
             outputWave = new WaveWriter(guestOutput, outputCapture.WaveFormat);
