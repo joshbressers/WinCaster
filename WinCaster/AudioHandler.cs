@@ -146,7 +146,11 @@ namespace WinCaster
                 else
                 {
                     StopRecording();
+                    Environment.Exit(0);
                 }
+            } else
+            {
+                Environment.Exit(0);
             }
         }
     }
