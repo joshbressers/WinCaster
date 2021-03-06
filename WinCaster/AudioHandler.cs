@@ -74,6 +74,7 @@ namespace WinCaster
         }
         private void TripTimer(Object source, System.Timers.ElapsedEventArgs e)
         {
+            Thread.CurrentThread.IsBackground = true;
             AudioMeterInformation theInfo;
             float peakValue;
 
