@@ -88,6 +88,7 @@ namespace WinCaster
                 RecordButton.Content = "Record";
                 weAreRecording = false;
                 theAudio.StopRecording();
+                RecordingLabel.Visibility = Visibility.Hidden;
             }
             else
             {
@@ -96,7 +97,7 @@ namespace WinCaster
                 VoicePicker.IsEnabled = false;
                 GuestPicker.IsEnabled = false;
                 theAudio.StartRecording(OutputPath.Text);
-                
+                RecordingLabel.Visibility = Visibility.Visible;
             }
         }
 
