@@ -27,6 +27,8 @@ namespace WinCaster
     public partial class MainWindow : Window
     {
 
+        // This is surprisingly harder to do that I expected, let's just do it manually for now
+        private string version = "0.0.1";
         private static AudioHandler theAudio;
         private static bool weAreRecording = false;
         private static bool guestPicked = false;
@@ -37,6 +39,7 @@ namespace WinCaster
         {
             InitializeComponent();
 
+            VersionField.Content = "Version: " + version;
             configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
             // Figure out our devices

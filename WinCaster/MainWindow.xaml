@@ -20,6 +20,7 @@
         <Button x:Name="OutputDirectoryButton" Content="OutputDirectory" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="97" Click="Output_Click" Height="23"/>
         <TextBox x:Name="OutputPath" HorizontalAlignment="Left" Height="23" Margin="112,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320"/>
         <Label x:Name="RecordingLabel" Content="RECORDING" HorizontalAlignment="Left" Margin="325,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Red" Visibility="Hidden"/>
+        <Label x:Name="VersionField" Content="Version 1.1.1" HorizontalAlignment="Left" Margin="6,82,0,0" VerticalAlignment="Top" Height="28" FontSize="10" Width="245"/>
 
     </Grid>
 </Window>
