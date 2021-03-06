@@ -58,12 +58,13 @@ namespace WinCaster
                 folderDialog.SelectedPath = configFile.AppSettings.Settings["OutputDirectory"].Value;
                 OutputPath.Text = configFile.AppSettings.Settings["OutputDirectory"].Value;
             } else {
-                configFile.AppSettings.Settings.Add("OutputDirectory", Directory.GetCurrentDirectory());
+                string outDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                configFile.AppSettings.Settings.Add("OutputDirectory", outDir);
                 configFile.Save(ConfigurationSaveMode.Modified);
                 ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
 
-                folderDialog.SelectedPath = Directory.GetCurrentDirectory();
-                OutputPath.Text = Directory.GetCurrentDirectory();
+                folderDialog.SelectedPath = outDir;
+                OutputPath.Text = outDir;
             }
 
             RecordButton.IsEnabled = false;
