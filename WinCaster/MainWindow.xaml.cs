@@ -73,7 +73,12 @@ namespace WinCaster
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
+        }
+
+        private void Window_Main_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            theAudio.Exit(sender, e);
         }
 
         private void Record_Click(object sender, RoutedEventArgs e)

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.Win32;
 using System.Text;
 using System.Timers;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using CSCore;
 using CSCore.CoreAudioAPI;
@@ -24,6 +26,7 @@ namespace WinCaster
         private static WasapiCapture outputCapture;
         private static WaveWriter inputWave;
         private static WaveWriter outputWave;
+        private static bool areRecording = false;
 
         public AudioHandler()
         {
@@ -95,6 +98,7 @@ namespace WinCaster
         }
         public void StartRecording(string thePath)
         {
+            areRecording = true;
             string dateString = DateTime.Now.ToString("yyyyMMddHmmss");
             string voiceOutput = Path.Combine(thePath, dateString + "-voice.wav");
             string guestOutput = Path.Combine(thePath, dateString + "-guest.wav");
@@ -119,11 +123,27 @@ namespace WinCaster
 
         public void StopRecording()
         {
+            areRecording = false;
             outputCapture.DataAvailable -= WriteOutputData;
             inputCapture.DataAvailable -= WriteInputData;
 
             outputWave.Dispose();
             inputWave.Dispose();
+        }
+
+        public void Exit(Object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (areRecording == true)
+            {
+                if (MessageBox.Show("You are recording, close anyway?", "Recording runs", MessageBoxButton.YesNo, MessageBoxImage.Exclamation) == MessageBoxResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    StopRecording();
+                }
+            }
         }
     }
 }
