@@ -27,7 +27,7 @@ namespace WinCaster
     public partial class MainWindow : Window
     {
 
-        // This is surprisingly harder to do that I expected, let's just do it manually for now
+        // This is surprisingly harder to get a version than I expected, let's just do it manually for now
         private string version = "0.0.2-debug";
         private static AudioHandler theAudio;
         private static bool weAreRecording = false;
