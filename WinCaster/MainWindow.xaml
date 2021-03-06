@@ -5,22 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WinCaster"
         mc:Ignorable="d"
-        Title="MainWindow" Height="320" Width="460" ResizeMode="CanMinimize" Icon="wc.png" Closing="Window_Main_Closing" >
+        Title="MainWindow" Height="330" Width="460" ResizeMode="CanMinimize" Icon="wc.png" Closing="Window_Main_Closing" >
     <Grid Margin="0,0,0,0">
         <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Source="wincaster-logo.png"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="Choose audio sources" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,148,0,0" TextWrapping="Wrap" Text="Your Voice" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,183,0,0" TextWrapping="Wrap" Text="Guest Voice" VerticalAlignment="Top"/>
-        <ProgressBar x:Name="VoiceMeter" HorizontalAlignment="Left" Height="22" Margin="282,148,0,0" VerticalAlignment="Top" Width="150" ValueChanged="VoiceMeter_ValueChanged"/>
-        <ProgressBar x:Name="GuestMeter" HorizontalAlignment="Left" Height="22" Margin="282,183,0,0" VerticalAlignment="Top" Width="150" ValueChanged="GuestMeter_ValueChanged"/>
-        <ComboBox x:Name="VoicePicker" HorizontalAlignment="Left" Margin="88,148,0,0" VerticalAlignment="Top" Width="176" SelectionChanged="VoicePicker_SelectionChanged"/>
-        <ComboBox x:Name="GuestPicker" HorizontalAlignment="Left" Margin="88,183,0,0" VerticalAlignment="Top" Width="176" SelectionChanged="GuestPicker_SelectionChanged"/>
-        <Button x:Name="RecordButton" Content="Record" HorizontalAlignment="Left" Margin="357,249,0,0" VerticalAlignment="Top" Width="75" Click="Record_Click"/>
-        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click"/>
-        <Button x:Name="OutputDirectoryButton" Content="OutputDirectory" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="97" Click="Output_Click" Height="23"/>
-        <TextBox x:Name="OutputPath" HorizontalAlignment="Left" Height="23" Margin="112,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,102,0,0" TextWrapping="Wrap" Text="Choose audio sources" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,143,0,0" TextWrapping="Wrap" Text="Your Voice" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,178,0,0" TextWrapping="Wrap" Text="Guest Voice" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="VoiceMeter" HorizontalAlignment="Left" Height="22" Margin="282,143,0,0" VerticalAlignment="Top" Width="150" ValueChanged="VoiceMeter_ValueChanged"/>
+        <ProgressBar x:Name="GuestMeter" HorizontalAlignment="Left" Height="22" Margin="282,178,0,0" VerticalAlignment="Top" Width="150" ValueChanged="GuestMeter_ValueChanged"/>
+        <ComboBox x:Name="VoicePicker" HorizontalAlignment="Left" Margin="88,143,0,0" VerticalAlignment="Top" Width="176" SelectionChanged="VoicePicker_SelectionChanged"/>
+        <ComboBox x:Name="GuestPicker" HorizontalAlignment="Left" Margin="88,178,0,0" VerticalAlignment="Top" Width="176" SelectionChanged="GuestPicker_SelectionChanged"/>
+        <Button x:Name="RecordButton" Content="Record" HorizontalAlignment="Left" Margin="357,249,0,0" VerticalAlignment="Top" Width="75" Click="Record_Click" Height="32"/>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click" Height="32"/>
+        <Button x:Name="OutputDirectoryButton" Content="OutputDirectory" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="97" Click="Output_Click" Height="22"/>
+        <TextBox x:Name="OutputPath" HorizontalAlignment="Left" Height="22" Margin="112,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320"/>
         <Label x:Name="RecordingLabel" Content="RECORDING" HorizontalAlignment="Left" Margin="325,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Red" Visibility="Hidden"/>
         <Label x:Name="VersionField" Content="Version 1.1.1" HorizontalAlignment="Left" Margin="6,82,0,0" VerticalAlignment="Top" Height="28" FontSize="10" Width="245"/>
+        <Button x:Name="HelpButton" Content="Help / About" HorizontalAlignment="Left" Margin="352,107,0,0" VerticalAlignment="Top" Width="80" Height="22" Click="HelpButton_Click"/>
 
     </Grid>
 </Window>

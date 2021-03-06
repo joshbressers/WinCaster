@@ -28,7 +28,7 @@ namespace WinCaster
     {
 
         // This is surprisingly harder to do that I expected, let's just do it manually for now
-        private string version = "0.0.1";
+        private string version = "0.0.2-debug";
         private static AudioHandler theAudio;
         private static bool weAreRecording = false;
         private static bool guestPicked = false;
@@ -145,6 +145,11 @@ namespace WinCaster
             configFile.AppSettings.Settings["OutputDirectory"].Value = OutputPath.Text;
             configFile.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+        }
+
+        private void HelpButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/joshbressers/WinCaster");
         }
     }
 }
