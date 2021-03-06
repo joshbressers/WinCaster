@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WinCaster"
         mc:Ignorable="d"
-        Title="MainWindow" Height="320" Width="460" ResizeMode="NoResize" >
+        Title="MainWindow" Height="320" Width="460" ResizeMode="NoResize" Icon="wc.png" >
     <Grid Margin="0,0,0,0">
         <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Source="wincaster-logo.png"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="Plese choose audio sources" VerticalAlignment="Top" FontSize="20"/>
