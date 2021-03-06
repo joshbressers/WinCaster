@@ -7,6 +7,8 @@ Simple tool for recording podcast audio
 
 WinCaster is a tool that will record the audio from a local microphone as well as the audio being sent to speakers. The intent is to use this to record yourself and guest for podcasting. The idea was taken from a Linux tool called [Pulsecaster](http://stickster.github.io/pulsecaster/)
 
+You can download it from the project's GitHub [Releases](https://github.com/joshbressers/WinCaster/releases) page
+
 Yes, the artwork is very bad, but it's grown on me, so I'm keeing it for now.
 
 # How to use
