@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.Win32;
 using System.Text;
 using System.Timers;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,7 +18,7 @@ namespace WinCaster
 {
     class AudioHandler
     {
-        private static Timer theTimer;
+        private static System.Timers.Timer theTimer;
         private static MMDevice inputDevice = null;
         private static MMDevice outputDevice = null;
         private static ProgressBar inputProgress;
@@ -113,11 +114,13 @@ namespace WinCaster
 
         private void WriteInputData(object s, DataAvailableEventArgs e)
         {
+            Thread.CurrentThread.IsBackground = true;
             inputWave.Write(e.Data, e.Offset, e.ByteCount);
         }
 
         private void WriteOutputData(object s, DataAvailableEventArgs e)
         {
+            Thread.CurrentThread.IsBackground = true;
             outputWave.Write(e.Data, e.Offset, e.ByteCount);
         }
 
